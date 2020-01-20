@@ -41,10 +41,10 @@ class Home extends Component {
               src="https://cdn.pixabay.com/photo/2014/03/25/16/24/female-296990_960_720.png"
             />
             <div  className="c-card__header">
-            <h2 style={{margin:"0"}}>{el.name}</h2>
-            <p style={{margin:"0"}}>{el.username}</p>
-            <p style={{margin:"0"}}>{el.website}</p>
-            <Link to={`user/${el.id}/posts/`} > <button className="homeButton" >Following</button></Link>
+            <h2 className="homeStyle">{el.name}</h2>
+            <p className="homeStyle">{el.username}</p>
+            <p className="homeStyle">{el.website}</p>
+            <Link to={`user/${el.id}/posts/`}  className="homeStyle"> <button className="homeButton" >Following</button></Link>
           </div>
           </div>
           ))}

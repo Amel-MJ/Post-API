@@ -34,10 +34,10 @@ class Details extends Component {
     const { data } = this.state;
     return (
         <div className="detail">
-            <div className="homeImg"><img src="https://via.placeholder.com/400x225"/></div>
-            <div className="title"><h1>{data.title}</h1></div>
+            <div className="homeStyle"><img style={{"width":"400px"}} src="https://hiring-assets.careerbuilder.com/media/attachments/careerbuilder-ar_post-2361.jpg?1465416989"/></div>
+            <div className="title"><h2>{data.title}</h2></div>
             <div className="body"><p>{data.body}</p></div>
-            <h3>Comments</h3>
+            <h1>Comments</h1>
             <Comments idPost={this.state.idPost} />
         </div>
 

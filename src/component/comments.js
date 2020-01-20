@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Posts from './posts'
 
 import axios from "axios";
 
@@ -49,7 +48,6 @@ class Comments extends Component {
                   <span>{el.name}</span>{" "}
                 </p>
                 <p>{el.body}</p>
-                <Posts lenght= {data.lenght}/>
               </div>
             </div>
           </div>

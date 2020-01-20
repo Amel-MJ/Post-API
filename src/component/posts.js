@@ -5,6 +5,7 @@ import axios from "axios";
 
 
 import '../styles/mysass.scss';
+import NbComments from "./nbComments";
 
 class Posts extends Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class Posts extends Component {
         console.log(error);
       });
   };
+  
   render() {
 
     const { data } = this.state;
@@ -43,7 +45,7 @@ class Posts extends Component {
           <article className="c-card" key={i}>
           <header className="c-card__header">
             <img
-              src="http://placehold.it/350x200"
+              src="https://hiring-assets.careerbuilder.com/media/attachments/careerbuilder-ar_post-2361.jpg?1465416989"
               className="c-card__image"
               alt="Card Image"
             />
@@ -57,8 +59,8 @@ class Posts extends Component {
           </div>
 
           <footer className="c-card__footer">
-            <p>Voir l'article</p>
-            <p>{this.props.lenght}</p>
+            <p>Voir l'article </p>
+            <div className="postComment"> <NbComments idPost={el.id}/></div>
           </footer>
         </article>
         </Link>

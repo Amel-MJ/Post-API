@@ -2,25 +2,21 @@ import React, { Component } from "react";
 
 import axios from "axios";
 
-class Comments extends Component {
+class NbComments extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      idPost: this.props.idPost,
-      commt: []
-    };
+    this.state = { nb: 0 };
   }
 
   componentDidMount = () => {
     axios
       .get(
-        `https://jsonplaceholder.typicode.com/comments?postId=${this.state.idPost}`
+        `https://jsonplaceholder.typicode.com/comments?postId=${this.props.idPost}`
       )
       .then(response => {
         if (response.status === 200 && response != null) {
           this.setState({
-            commt: response.commt
-          
+            nb: response.data.length
           });
         } else {
           console.log("erreur: " + response.status);
@@ -32,13 +28,11 @@ class Comments extends Component {
   };
 
   render() {
-  
     return (
       <div className="comments">
-       
-       <p>{commt.length}</p>
+        <p>{this.state.nb}</p>
       </div>
     );
   }
 }
-export default Comments;
+export default NbComments;
