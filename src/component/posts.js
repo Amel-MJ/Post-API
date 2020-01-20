@@ -58,7 +58,7 @@ class Posts extends Component {
 
           <footer className="c-card__footer">
             <p>Voir l'article</p>
-            <p>{this.props.commt}</p>
+            <p>{this.props.lenght}</p>
           </footer>
         </article>
         </Link>
